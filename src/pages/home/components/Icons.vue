@@ -102,12 +102,10 @@
       right: 0;
       bottom: 0;
       height: 1.1rem;
-      line-height: .44rem;
+      line-height: 1.44rem;
       color: $darkTextColor;
       text-align: center;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+      @include ellipsis;
     }
     .icons-img {
       position: absolute;
