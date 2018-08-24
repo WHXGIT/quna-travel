@@ -101,8 +101,8 @@
       left: 0;
       right: 0;
       bottom: 0;
-      height: 1.1rem;
-      line-height: .44rem;
+      height: 1rem;
+      line-height: 1rem;
       color: $darkTextColor;
       text-align: center;
       overflow: hidden;
