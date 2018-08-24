@@ -101,13 +101,16 @@
       left: 0;
       right: 0;
       bottom: 0;
+<<<<<<< HEAD
       height: 1rem;
       line-height: 1rem;
+=======
+      height: 1.1rem;
+      line-height: 1.44rem;
+>>>>>>> 5a8ba315c7ff4d9bdca7321f5ef5e59332c812f3
       color: $darkTextColor;
       text-align: center;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+      @include ellipsis;
     }
     .icons-img {
       position: absolute;
