@@ -84,6 +84,7 @@
 <style scoped lang="scss">
   @import '~styles/theme.scss';
   @import "~styles/maxins.scss";
+
   .icons > > > .swiper-container {
     height: 0;
     padding-bottom: 50%;
@@ -101,13 +102,10 @@
       left: 0;
       right: 0;
       bottom: 0;
-<<<<<<< HEAD
       height: 1rem;
       line-height: 1rem;
-=======
       height: 1.1rem;
       line-height: 1.44rem;
->>>>>>> 5a8ba315c7ff4d9bdca7321f5ef5e59332c812f3
       color: $darkTextColor;
       text-align: center;
       @include ellipsis;
