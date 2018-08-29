@@ -84,8 +84,9 @@
 <style scoped lang="scss">
   @import '~styles/theme.scss';
   @import "~styles/maxins.scss";
+
   .icons > > > .swiper-container {
-    height: 0;
+    height: 1rem;
     padding-bottom: 50%;
   }
 
@@ -94,14 +95,15 @@
     float: left;
     padding-bottom: 25%;
     height: 0;
+    margin-top: .5rem;
     overflow: hidden;
     position: relative;
     .icons-desc {
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 0;
-      height: 1.1rem;
+      bottom: 4px;
+      height: 1.44rem;
       line-height: 1.44rem;
       color: $darkTextColor;
       text-align: center;
@@ -116,7 +118,7 @@
       box-sizing: border-box;
       padding: .1rem;
       .icon-img-content {
-        height: 87%;
+        height: 85%;
         display: block;
         margin: 0 auto;
       }
