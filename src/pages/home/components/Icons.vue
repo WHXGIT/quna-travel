@@ -84,12 +84,16 @@
 <style scoped lang="scss">
   @import '~styles/theme.scss';
   @import "~styles/maxins.scss";
+<<<<<<< HEAD
 
   .icons > > > .swiper-container {
     height: 1rem;
+=======
+  .icons >>> .swiper-container {
+    height: 0;
+>>>>>>> index-recommend
     padding-bottom: 50%;
   }
-
   .icon {
     width: 25%;
     float: left;
