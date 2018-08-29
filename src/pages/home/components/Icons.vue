@@ -104,6 +104,10 @@
       right: 0;
       bottom: 4px;
       height: 1.44rem;
+      bottom: 0;
+      height: 1rem;
+      line-height: 1rem;
+      height: 1.1rem;
       line-height: 1.44rem;
       color: $darkTextColor;
       text-align: center;
