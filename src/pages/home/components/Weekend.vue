@@ -22,32 +22,7 @@ export default {
   name: "HomeWeekend",
   data() {
     return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/53/4bcd11cc3a5374.jpg_r_640x214_988a4cee.jpg',
-          desc: '武隆天坑地缝国家地质公园',
-          title: '武隆天坑地缝国家地质公园'
-        },
-        {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/53/4bcd11cc3a5374.jpg_r_640x214_988a4cee.jpg',
-          desc: '武隆天坑地缝国家地质公园',
-          title: '武隆天坑地缝国家地质公园'
-        },
-        {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/53/4bcd11cc3a5374.jpg_r_640x214_988a4cee.jpg',
-          desc: '武隆天坑地缝国家地质公园',
-          title: '武隆天坑地缝国家地质公园'
-        },
-        {
-          id: '0004',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/be/be4802e10f3b3107.water.jpg_200x200_0e98aabe.jpg',
-          desc: '武隆天坑地缝国家地质公园',
-          title: '武隆天坑地缝国家地质公园'
-        },
-      ]
+  
     }
   },
   components: {
