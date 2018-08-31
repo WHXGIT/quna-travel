@@ -34,7 +34,6 @@ export default {
 
 <style scoped lang="scss">
 @import '~styles/maxins.scss';
-
 .title {
 	margin-top: 0.5rem;
 	line-height: 2rem;
