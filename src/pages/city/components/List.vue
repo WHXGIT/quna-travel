@@ -1,52 +1,85 @@
 <template>
-  <div class="list">
-    <div class="area">
-      <div class="title border-topbottom">当前城市</div>
-      <div class="button-list">
-        <div class="button-wrapper">
-          <div class="button">
-            北京
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="area">
-      <div class="title border-topbottom">当前城市</div>
-      <div class="button-list">
-        <div class="button-wrapper">
-          <div class="button">
-            北京
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="area">
-      <div class="title border-topbottom">A</div>
-      <ul class="item-list">
-        <li class="item b-1px-t:before">阿拉尔</li>
-        <li class="item b-1px-t:before">阿拉尔</li>
-        <li class="item b-1px-t:before">阿拉尔</li>
-      </ul>
-    </div>
-  </div>
+	<div class="list" ref="wrapper">
+		<div>
+			<div class="area">
+				<div class="title border-topbottom">当前城市</div>
+				<div class="button-list">
+					<div class="button-wrapper">
+						<div class="button">
+							{{this.currentCtiy}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="area">
+				<div class="title border-topbottom">热门城市</div>
+				<div class="button-list">
+					<div class="button-wrapper" v-for="item of hotCities" :key="item.id" @click="handleCityClick(item.name)">
+						<div class="button">
+							{{item.name}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="area" v-for="(item, key) of cities" :key="key" :ref="key">
+				<div class="title border-topbottom">{{key}}</div>
+				<ul class="item-list">
+					<li class="item b-1px-t:before" v-for="innerItem of item" :key="innerItem.id" @click="handleCityClick(innerItem.name)">
+						{{innerItem.name}}
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
+import Bscroll from 'better-scroll'
+import { mapState, mapMutations } from 'vuex'
 export default {
-  name: "CityList",
-  data() {
-    return {
+	name: "CityList",
+	props: {
+		cities: Object,
+		hotCities: Array,
+		letter: String
+	},
+	data() {
+		return {
 
-    }
-  },
-  components: {
+		}
+	},
+	watch: {
+		letter() {
+			if (this.letter) {
+				const element = this.$refs[this.letter][0];
+				this.scroll.scrollToElement(element);
+			}
+		}
+	},
+	computed: {
+		...mapState({
+			currentCtiy: 'city'
+		})
+	},
+	methods: {
+		handleCityClick(city) {
+			this.changeCity(city);
+			this.$router.push('/')
+		},
+		...mapMutations(['changeCity'])
+	},
+	mounted() {
+		this.scroll = new Bscroll(this.$refs.wrapper)
+	},
+	components: {
 
-  }
+	}
 }
 </script>
 
 <style scoped lang="scss">
 @import '~styles/theme.scss';
+@import '~styles/border';
 .border-topbottom {
 	&:before {
 		border-color: #ccc;
@@ -93,6 +126,8 @@ export default {
 		.item {
 			line-height: 2.3rem;
 			padding-left: 0.8rem;
+			border-bottom: 1px;
+			border-bottom-style: ridge;
 		}
 	}
 }
